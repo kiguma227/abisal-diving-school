@@ -1,0 +1,158 @@
+:root {
+  --c-surface: #EAF6F6;
+  --c-shallow: #9FD3D6;
+  --c-mid: #1F6F8B;
+  --c-deep: #0B2A3C;
+  --c-deepest: #07202E;
+  --c-coral: #FF7A59;
+  --c-coral-rgb: 255 122 89;
+  --c-ink-dark: #0B2A3C;
+  --c-ink-dark-2: #2B4C5C;
+  --c-ink-light: #EAF6F6;
+  --c-ink-light-2: #BFD6DC;
+  --c-ink-light-mid: #DCEDF0;
+  --c-white: #FFFFFF;
+  --c-surface-rgb: 234 246 246;
+  --c-deepest-rgb: 7 32 46;
+  --c-deep-rgb: 11 42 60;
+
+  --z0: #EAF6F6;
+  --z1: #DEF0F1;
+  --z2: #9FD3D6;
+  --zT: #62A0B0;
+  --z3: #1F6F8B;
+  --z4: #18566F;
+  --z5: #113E52;
+  --z6: #0B2A3C;
+  --z7: #092636;
+  --z8: #082231;
+  --z9: #07202E;
+
+  --font-display: "Sora", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --fs-hero: clamp(2.625rem, 1.55rem + 4.7vw, 6rem);
+  --fs-h2: clamp(2rem, 1.45rem + 2.3vw, 3.5rem);
+  --fs-h3: clamp(1.25rem, 1.15rem + 0.45vw, 1.5rem);
+  --fs-lead: clamp(1.0625rem, 0.99rem + 0.32vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-micro: 0.8125rem;
+  --fs-number: clamp(2.75rem, 2.2rem + 2vw, 3.75rem);
+
+  --lh-display: 1.04;
+  --lh-heading: 1.1;
+  --lh-snug: 1.35;
+  --lh-body: 1.62;
+
+  --ls-display: -0.035em;
+  --ls-heading: -0.022em;
+  --ls-tight: -0.01em;
+  --ls-label: 0.01em;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+  --space-20: 160px;
+
+  --gutter: clamp(16px, 2.6vw + 6.6px, 48px);
+  --container: 1240px;
+  --grid-gap: clamp(16px, 1.2vw + 11.7px, 24px);
+  --zone-pad: clamp(96px, 7.5vw + 69px, 160px);
+  --thermocline: clamp(208px, 26vh, 320px);
+  --header-h: 64px;
+
+  --r-xs: 8px;
+  --r-sm: 14px;
+  --r-md: 20px;
+  --r-lg: 28px;
+  --r-pill: 999px;
+
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.32, 0.64, 1);
+  --ease-water: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  --dur-1: 120ms;
+  --dur-2: 200ms;
+  --dur-3: 320ms;
+  --dur-4: 480ms;
+  --dur-5: 640ms;
+  --dur-6: 900ms;
+  --dur-ripple: 650ms;
+  --dur-lang: 90ms;
+
+  --glass-blur: 14px;
+  --glass-blur-hover: 18px;
+  --glass-sat: 1.6;
+  --glass-sat-hover: 1.75;
+  --glass-bright-hover: 1.06;
+  --glass-header-blur: 18px;
+
+  --glass-light-fill: rgb(var(--c-surface-rgb) / 0.74);
+  --glass-dark-fill: rgb(var(--c-deepest-rgb) / 0.76);
+  --glass-neutral-light: rgb(255 255 255 / 0.6);
+  --glass-neutral-light-hover: rgb(255 255 255 / 0.7);
+  --glass-neutral-dark: rgb(var(--c-surface-rgb) / 0.08);
+  --glass-neutral-dark-hover: rgb(var(--c-surface-rgb) / 0.12);
+  --glass-coral-core: rgb(var(--c-coral-rgb) / 0.9);
+  --glass-coral-rim: rgb(var(--c-coral-rgb) / 0.8);
+  --glass-coral-core-hover: rgb(var(--c-coral-rgb) / 0.95);
+  --glass-border-top: rgb(255 255 255 / 0.85);
+  --glass-border-mid: rgb(255 255 255 / 0.18);
+  --glass-border-bottom: rgb(255 255 255 / 0.4);
+  --glass-highlight: rgb(255 255 255 / 0.55);
+  --glass-shade: rgb(var(--c-deepest-rgb) / 0.22);
+  --glass-shadow: 0 1px 2px rgb(var(--c-deepest-rgb) / 0.08), 0 10px 28px -14px rgb(var(--c-deepest-rgb) / 0.35);
+  --glass-refraction-scale: 9;
+
+  --card-light: rgb(255 255 255 / 0.46);
+  --card-light-border: rgb(255 255 255 / 0.75);
+  --card-dark: rgb(var(--c-surface-rgb) / 0.05);
+  --card-dark-border: rgb(var(--c-surface-rgb) / 0.14);
+  --card-shadow: 0 1px 1px rgb(var(--c-deepest-rgb) / 0.03), 0 18px 40px -28px rgb(var(--c-deepest-rgb) / 0.28);
+
+  --focus-width: 2px;
+  --focus-offset: 3px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gutter: clamp(84px, 7vw, 112px);
+    --header-h: 68px;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --glass-light-fill: rgb(var(--c-surface-rgb) / 0.95);
+    --glass-dark-fill: rgb(var(--c-deepest-rgb) / 0.95);
+    --glass-neutral-light: rgb(255 255 255 / 0.9);
+    --glass-neutral-light-hover: rgb(255 255 255 / 0.95);
+    --glass-neutral-dark: rgb(31 66 84 / 0.92);
+    --glass-neutral-dark-hover: rgb(38 76 96 / 0.95);
+    --glass-coral-core: rgb(var(--c-coral-rgb) / 1);
+    --glass-coral-rim: rgb(var(--c-coral-rgb) / 0.97);
+    --glass-coral-core-hover: rgb(var(--c-coral-rgb) / 1);
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --glass-border-top: rgb(255 255 255 / 1);
+    --glass-border-mid: rgb(255 255 255 / 0.7);
+    --glass-border-bottom: rgb(255 255 255 / 0.9);
+    --card-light-border: rgb(var(--c-deep-rgb) / 0.6);
+    --card-dark-border: rgb(var(--c-surface-rgb) / 0.6);
+    --c-ink-dark-2: #0B2A3C;
+    --c-ink-light-2: #EAF6F6;
+    --focus-width: 3px;
+  }
+}
