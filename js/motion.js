@@ -211,13 +211,19 @@
     Abisal.depth.subscribe({
       measure: function () {
         var r = line.getBoundingClientRect();
-        top = r.top + window.scrollY + inset;
-        length = Math.max(1, r.height - inset * 2);
-        stepOffsets = steps.map(function (step) {
-          var node = step.querySelector(".step__node");
-          var nr = node.getBoundingClientRect();
-          return nr.top + nr.height / 2 - r.top - inset;
+        var centres = steps.map(function (step) {
+          var nr = step.querySelector(".step__node").getBoundingClientRect();
+          return nr.top + nr.height / 2 - r.top;
         });
+        var start = centres.length ? centres[0] : inset;
+        var end = centres.length ? centres[centres.length - 1] : r.height - inset;
+        top = r.top + window.scrollY + start;
+        length = Math.max(1, end - start);
+        stepOffsets = centres.map(function (c) {
+          return c - start;
+        });
+        line.style.setProperty("--rope-start", start.toFixed(2) + "px");
+        line.style.setProperty("--rope-length", length.toFixed(2) + "px");
         lastProgress = -1;
       },
       update: function (state) {

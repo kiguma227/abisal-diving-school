@@ -611,11 +611,10 @@ html.hero-ready .hero__actions {
 
 .rope {
   position: absolute;
-  top: 12px;
-  bottom: 12px;
+  top: var(--rope-start, 12px);
   left: 15px;
   width: 2px;
-  height: calc(100% - 24px);
+  height: var(--rope-length, calc(100% - 24px));
   overflow: visible;
 }
 
@@ -642,7 +641,7 @@ html.hero-ready .hero__actions {
 
 .rope__marker {
   position: absolute;
-  top: 12px;
+  top: var(--rope-start, 12px);
   left: 16px;
   width: 15px;
   height: 15px;
